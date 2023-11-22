@@ -14,6 +14,26 @@
  * @returns {undefined|number}
  */
 function isFibonacci(value) {
+    let first = 0;
+    let second = 1;
+    let num = 0;
+    let iteration_count = 1;
+    
+    if (value < 1) {
+        return 0;
+    }
+    if (value === 1) {
+        return 1;
+    }
+    while (num <= value) {
+        num = first + second;
+        first = second;
+        second = num;
+        iteration_count++
+        if (num === value) {
+            return iteration_count;
+        }
+    }
     return undefined;
 }
 

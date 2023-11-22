@@ -16,7 +16,21 @@
  * @returns {string}
  */
 function decrypt(secret) {
-    return undefined;
+    const alphabet = [
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+        'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+        'u', 'v', 'w', 'x', 'y', 'z', ' ', ' '
+      ]
+    
+    str = secret.split('')
+    for (let i = 0; i < str.length; i++) {
+      const index = alphabet.findIndex((item) => item === str[i])
+        if(str[i] === 'z'){
+          str[i] = alphabet[index - 25]
+        } else str[i] = alphabet[index + 1];
+    }
+    
+    return str.join('')
 }
 
 module.exports = decrypt;

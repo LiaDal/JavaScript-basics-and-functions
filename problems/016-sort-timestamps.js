@@ -9,7 +9,16 @@
  * @returns {string[]} отсортированный по возрастанию массив временных моментов
  */
 function sortTimestamps(list) {
-    return undefined;
+  let date = []    
+    
+  if(list.length <= 1){
+    return list 
+  } 
+  for(el of list){
+      el > el + 1
+      date.push(el);
+  }
+    return date.sort()
 }
 
 module.exports = sortTimestamps;

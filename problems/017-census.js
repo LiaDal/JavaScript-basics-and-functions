@@ -13,7 +13,12 @@
  * @returns {undefined|number}
  */
 function census(list) {
-    return -1;
+  const gender = list.filter( item => item.gender === 'Male')
+  if(gender.length > 0){
+    const age = gender.sort((a, b) => a.age < b.age ? 1 : -1);
+      return list.indexOf(age[0]) + 1
+  }
+    return undefined
 }
 
 module.exports = census;

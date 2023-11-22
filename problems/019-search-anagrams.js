@@ -12,7 +12,25 @@
  * @returns {string}
  */
 function searchAnagrams(value) {
-    return undefined;
+  if(value === '') {
+    return ''
+  }
+
+  let str = value.replace(/\./g, '');    
+  let arr = str.split(/\s/);
+  let sortedArr = arr.map(item => item.toLowerCase().split('').sort().join(''));
+  console.log(sortedArr)
+  const duplicates = [];
+
+for (let i = 0; i < sortedArr.length; i++) {
+for (let j = i + 1; j < sortedArr.length; j++) {
+  if (sortedArr[i] === sortedArr[j]) {
+    duplicates.push(sortedArr[i], sortedArr[j]);
+  }
 }
+
+  return duplicates
+}
+  }
 
 module.exports = searchAnagrams;

@@ -13,7 +13,9 @@
  * @returns {number[]}
  */
 function union(a, b) {
-    return undefined;
+    const result = new Set(a.filter(el => b.includes(el)))
+    const array = Array.from(result)
+    return array.sort((a, b) => a - b)
 }
 
 module.exports = union;

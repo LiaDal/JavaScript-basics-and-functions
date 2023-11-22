@@ -20,7 +20,10 @@
  * второй элемент – Катей, третий – Сережей
  */
 function computeOrizurus(total) {
-    return undefined;
+    let boy = Math.floor(total / 6)
+    let girl = total - (boy * 2)
+    let number = [boy, girl, boy]
+    return number
 }
 
 module.exports = computeOrizurus;

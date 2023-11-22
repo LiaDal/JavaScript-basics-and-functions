@@ -14,7 +14,9 @@
  * @returns {boolean}
  */
 function checkTicket(number) {
-    return undefined;
+    const startSum = number.split('').slice(0, 3).reduce((acc, a) => acc + +a,0)
+    const endSum = number.split('').slice(-3).reduce((acc, a) => acc + +a ,0)
+    return startSum === endSum
 }
 
 module.exports = checkTicket;

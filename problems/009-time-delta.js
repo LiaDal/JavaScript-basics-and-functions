@@ -17,7 +17,10 @@
  * @returns {number} разница между x и y в секундах
  */
 function getTimeDelta(x, y) {
-    return undefined;
+  const firstDate = new Date('July 20,' + x);
+  const secondDate = new Date('July 20,' + y);
+  const seconds = Math.abs(firstDate.getTime() - secondDate.getTime())/1000;
+  return seconds
 }
 
 module.exports = getTimeDelta;
