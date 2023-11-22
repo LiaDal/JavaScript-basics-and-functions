@@ -4,7 +4,7 @@
  * @return {number} - факториал числа
  */
 function factorial(n) {
-    // ваш код здесь
+    return n ? n * factorial(n - 1) : 1;
 }
 
 // Примеры:

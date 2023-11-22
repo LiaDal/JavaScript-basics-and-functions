@@ -5,7 +5,9 @@
  * @return {number} - наибольший общий делитель
  */
 function gcd(a, b) {
-    // ваш код здесь
+  if (b > a) return gcd(b, a);
+  if (!b) return a;
+  return gcd(b, a % b);
 }
 
 // Примеры:

@@ -4,7 +4,13 @@
  * @return {number} - число Фибоначчи с заданным индексом
  */
 function fibonacci(n) {
-    // ваш код здесь
+    let prev = 0, next = 1;
+    for(let i = 0; i < n; i++){
+      let temp = next;
+      next = prev + next;
+      prev = temp;
+    }
+    return prev;
 }
 
 // Примеры:

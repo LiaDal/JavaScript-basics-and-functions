@@ -22,8 +22,8 @@ function searchAnagrams(value) {
   console.log(sortedArr)
   const duplicates = [];
 
-for (let i = 0; i < sortedArr.length; i++) {
-for (let j = i + 1; j < sortedArr.length; j++) {
+  for (let i = 0; i < sortedArr.length; i++) {
+  for (let j = i + 1; j < sortedArr.length; j++) {
   if (sortedArr[i] === sortedArr[j]) {
     duplicates.push(sortedArr[i], sortedArr[j]);
   }
